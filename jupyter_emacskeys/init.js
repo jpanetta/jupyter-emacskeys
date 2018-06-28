@@ -10,6 +10,9 @@ define([
         // all newly created cells will have them.
         var extraKeys = CodeMirror.keyMap.emacs;
 
+        // JP: allow us to still paste from the system clipboard on Linux
+        delete extraKeys["Ctrl-V"];
+
         if (!extraKeys["Enter"]) extraKeys["Enter"] = "newlineAndIndent";
 
         // override Ctrl-Y to not select the whole line, because I
