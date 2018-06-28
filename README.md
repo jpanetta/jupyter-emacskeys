@@ -9,5 +9,11 @@ Ctrl-Y).
 pip install jupyter-emacskeys
 ```
 
+JP: I couldn't get `pip3 install -e .` to work, but the following did work:
+```
+python3 setup.py build
+python3 setup.py install --user
+```
+
 ### Requirements
 - jupyter notebook v4 or later
